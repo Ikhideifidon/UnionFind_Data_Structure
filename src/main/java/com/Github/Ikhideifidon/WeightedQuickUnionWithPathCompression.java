@@ -26,6 +26,7 @@ public class WeightedQuickUnionWithPathCompression {
         while (root != id[root])
             root = id[root];
 
+        // Path Compression
         while (p != root) {
             // Connect all the sites on the path of p to the root directly to the root.
             int next = id[p];
